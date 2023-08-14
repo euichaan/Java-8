@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 8월 16일 실습 예정
+ */
 public class FilteringApples {
 
 	public static void main(String[] args) {
@@ -17,28 +20,45 @@ public class FilteringApples {
 
 		List<Apple> greenApples = filterApples(inventory, GREEN, 0, true);
 		List<Apple> heavyApples = filterApples(inventory, null, 150, false);
+
+		// 5. 다섯 번째 시도: 익명 클래스 사용 With
+
+
+		// 6. 여섯 번째 시도: 람다 표현식 사용 With
+
 	}
 
-	// 1. 첫 번째 시도: 녹색 사과 필터링
+	// 1. 첫 번째 시도: 녹색 사과 필터링 With
 	public static List<Apple> filterGreenApples(List<Apple> inventory) {
 		return Collections.emptyList();
 	}
 
-	// 2. 두 번째 시도: 색을 파라미터화
+	// 2. 두 번째 시도: 색을 파라미터화 With
 	public static List<Apple> filterApplesByColor(List<Apple> inventory, Color color) {
 		return Collections.emptyList();
 	}
 
-	// 2. 두 번째 시도: 무게 정보 파라미터도 추가
+	// 2. 두 번째 시도: 무게 정보 파라미터도 추가 With
 	public static List<Apple> filterApplesByWeight(List<Apple> inventory, int weight) {
 		return Collections.emptyList();
 	}
 
-	// 3. 세 번째 시도: 가능한 모든 속성으로 필터링
+	// 3. 세 번째 시도: 가능한 모든 속성으로 필터링 With
 	public static List<Apple> filterApples(List<Apple> inventory, Color color, int weight, boolean flag) {
 		List<Apple> result = new ArrayList<>();
 		for (Apple apple : inventory) {
 			if ((flag && color == apple.getColor()) || (!flag && apple.getWeight() > weight)) {
+				result.add(apple);
+			}
+		}
+		return result;
+	}
+
+	// 4. 네 번째 시도: 추상적 조건으로 필터링 With
+	public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
+		List<Apple> result = new ArrayList<>();
+		for (Apple apple : inventory) {
+			if (p.test(apple)) {
 				result.add(apple);
 			}
 		}
