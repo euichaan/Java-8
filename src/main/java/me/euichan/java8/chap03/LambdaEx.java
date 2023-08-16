@@ -17,6 +17,11 @@ public class LambdaEx {
 			}
 		};
 
-		Comparator<Apple> byWeight2 = (Apple a1, Apple a2) -> Integer.compare(a1.getWeight(), a2.getWeight());
+
+		// Comparator<Apple> byWeight2 = (Apple a1, Apple a2) -> Integer.compare(a1.getWeight(), a2.getWeight());
+
+		// int -> Integer : boxing
+		// Integer -> int : unboxing
+		// autoboxing
 	}
 }

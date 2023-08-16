@@ -3,16 +3,18 @@ package me.euichan.java8.enumcomparison;
 import static org.junit.jupiter.api.DisplayNameGenerator.*;
 
 import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.Test;
 
 @DisplayNameGeneration(ReplaceUnderscores.class)
 class EnumTest {
 
 	Ranking ranking = null;
 
-	/**
+
 	@Test
 	void enum_비교시_equals는_NPE가_발생할_수_있다() {
-		System.out.println(ranking.equals(Ranking.WINNER)); // NPE 발생
+		// System.out.println(ranking.equals(Ranking.WINNER)); // NPE 발생
+		System.out.println(Ranking.WINNER.equals(ranking));
 	}
 
 	@Test
@@ -27,7 +29,7 @@ class EnumTest {
 
 	@Test
 	void enum_비교시_equality_operator는_컴파일에러가_발생한다() {
-		System.out.println(ranking == Rank.FIRST);
+		// System.out.println(ranking == Rank.FIRST);
 	}
-	**/
+
 }
