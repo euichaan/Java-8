@@ -20,16 +20,16 @@ public class FilteringApples {
 		List<Apple> greenApples = filterApples(inventory, GREEN, 0, true);
 		List<Apple> heavyApples = filterApples(inventory, null, 150, false);
 
-		// 5. 다섯 번째 시도: 익명 클래스 사용 With
+		// 5. 다섯 번째 시도: 익명 클래스 사용
 		filterApples(inventory, new ApplePredicate() {
 			@Override
 			public boolean test(final Apple apple) {
-				return false;
+				return RED == apple.getColor();
 			}
 		});
 
-		// 6. 여섯 번째 시도: 람다 표현식 사용 With
-		filterApples(inventory, apple -> false);
+		// 6. 여섯 번째 시도: 람다 표현식 사용
+		filterApples(inventory, (Apple apple) -> RED == apple.getColor());
 	}
 
 	// 4. 네 번째 시도: 추상적 조건으로 필터링 With

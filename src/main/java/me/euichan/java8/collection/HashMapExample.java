@@ -14,12 +14,15 @@ public class HashMapExample {
 
 		Person who=new Person("reakwon","666666-7777777");
 		Map<Person, Integer> map = new HashMap<>();
+
+		Map<String, String> stringMap = new HashMap<>(10);
 		map.put(person1, 90);
 		map.put(person2, 80);
 
 		System.out.println("map includes "+who.getName()+"? "+map.containsKey(who));
 
 		map.put(who, 70);
+		map.put(null, 100);
 		System.out.println(map);
 	}
 

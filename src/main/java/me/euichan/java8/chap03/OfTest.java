@@ -16,5 +16,7 @@ public class OfTest {
 		System.out.println(Thread.currentThread().getName());
 		Thread t = new Thread(() -> System.out.println(Thread.currentThread().getName()));
 		t.start();
+
+		integers.removeIf(i -> i % 2 == 0);
 	}
 }
