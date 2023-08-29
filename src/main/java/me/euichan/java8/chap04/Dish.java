@@ -3,9 +3,6 @@ package me.euichan.java8.chap04;
 import java.util.Arrays;
 import java.util.List;
 
-import lombok.Getter;
-
-@Getter
 public class Dish {
 
 	private final String name;
@@ -18,6 +15,22 @@ public class Dish {
 		this.vegetarian = vegetarian;
 		this.calories = calories;
 		this.type = type;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public boolean isVegetarian() {
+		return vegetarian;
+	}
+
+	public int getCalories() {
+		return calories;
+	}
+
+	public Type getType() {
+		return type;
 	}
 
 	@Override

@@ -17,6 +17,8 @@ public class FilteringApples {
 			new Apple(155, GREEN),
 			new Apple(120, RED));
 
+		// ==
+
 		List<Apple> greenApples = filterApples(inventory, GREEN, 0, true);
 		List<Apple> heavyApples = filterApples(inventory, null, 150, false);
 

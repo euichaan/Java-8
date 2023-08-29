@@ -26,7 +26,7 @@ public class PracticalExample {
 		inventory.sort((Apple a1, Apple a2) -> Integer.compare(a1.getWeight(), a2.getWeight()));
 
 		// 3. 메서드 참조
-		inventory.sort(Comparator.comparingInt(Apple::getWeight));
+		inventory.sort(Comparator.comparingInt(Apple::getWeight)); // T -> R , () -> R  ???
 
 		// 4. Runnable로 코드 블록 실행하기
 		Thread t = new Thread(() -> System.out.println("Hello world"));

@@ -11,6 +11,14 @@ public class Apple {
 	private int weight = 0;
 	private Color color;
 
+	public int getWeight() {
+		return weight;
+	}
+
+	public void getWeight1() {
+
+	}
+
 	@Override
 	public String toString() {
 		return String.format("Apple{color='%s', weight=%d}", color, weight); //문자열의 형식을 설정하는 메서드

@@ -15,5 +15,7 @@ public class threeHighCaloricDishNames {
 			.collect(Collectors.toList()); // 최종(종단) 연산 terminal operation
 
 		System.out.println(threeHighCaloricDishNames); // [pork, beef, chicken]
+
+
 	}
 }
